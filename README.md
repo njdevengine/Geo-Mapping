@@ -1,4 +1,6 @@
-# Unit 17 | Assignment - Visualizing Data with Leaflet
+Visualizing Data with Leaflet
+
+*Note* add your own Mapbox api key to ```/static/js/key.js```
 
 ## Background
 

@@ -1,4 +1,4 @@
-# Visualizing Data with Leaflet
+# Visualizing Data with Leaflet :herb: :globe_with_meridians: :earth_americas:
 
 *Note* add your own Mapbox api key to ```/static/js/key.js```
 

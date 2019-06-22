@@ -2,7 +2,7 @@
 
 *Note* add your own Mapbox api key to ```/static/js/key.js```
 
-## Background
+## WOW! California... Y U So Shakey...?
 
 ![1-Logo](Images/1-Logo.png)
 

@@ -49,13 +49,14 @@ d3.json(month_data, function(d) {
         radius: markers_size(eq_json_data[i].properties.mag)
       }
     )
+    //Attach popup to clicked objects
       .bindPopup(
         "<p><center><strong>Location:</strong> " +
           eq_name_array[i] +
           "</center></p><hr><p><center><strong> Magnitude:</strong> " +
           eq_json_data[i].properties.mag +
           "</center></p>" +
-          "<hr><p><center><strong>Incident Time:</strong> " +
+          "<hr><p><center><strong> EQ Time:</strong> " +
           time(eq_json_data[i].properties.time) +
           "</center></p>"
       )
@@ -80,7 +81,7 @@ function Color_Selector(magnitude) {
     return "#fafafa";
   }
 }
-
+//Convert Unix timestamp to a more standard time format
 function time(s) {
   return new Date(s * 1e3).toISOString().slice(-13, -5);
 }

@@ -24,6 +24,24 @@ function markers_size(magnitude) {
   return magnitude * 30000;
 }
 
+function Color_Selector(magnitude) {
+  if (magnitude > 5) {
+    return "#ffff00";
+  } else if (magnitude >= 4 && magnitude <= 5) {
+    return "#eeff41";
+  } else if (magnitude >= 3 && magnitude <= 4) {
+    return "#b2ff59";
+  } else if (magnitude >= 2 && magnitude <= 3) {
+    return "#69f0ae";
+  } else if (magnitude >= 1 && magnitude <= 2) {
+    return "#64ffda";
+  } else if (magnitude >= 0 && magnitude <= 1) {
+    return "#18ffff";
+  } else {
+    return "#fafafa";
+  }
+}
+
 d3.json(month_data, function(d) {
   let eq_json_data = d.features;
 
@@ -64,23 +82,6 @@ d3.json(month_data, function(d) {
   }
 });
 
-function Color_Selector(magnitude) {
-  if (magnitude > 5) {
-    return "#ffff00";
-  } else if (magnitude >= 4 && magnitude <= 5) {
-    return "#eeff41";
-  } else if (magnitude >= 3 && magnitude <= 4) {
-    return "#b2ff59";
-  } else if (magnitude >= 2 && magnitude <= 3) {
-    return "#69f0ae";
-  } else if (magnitude >= 1 && magnitude <= 2) {
-    return "#64ffda";
-  } else if (magnitude >= 0 && magnitude <= 1) {
-    return "#18ffff";
-  } else {
-    return "#fafafa";
-  }
-}
 //Convert Unix timestamp to a more standard time format
 function time(s) {
   return new Date(s * 1e3).toISOString().slice(-13, -5);

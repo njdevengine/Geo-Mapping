@@ -51,14 +51,14 @@ d3.json(month_data, function(d) {
     )
     //Attach popup to clicked objects
       .bindPopup(
-        "<p><center><strong>Location:</strong> " +
+        "<div><center><strong>Location:</strong> " +
           eq_name_array[i] +
-          "</center></p><hr><p><center><strong> Magnitude:</strong> " +
+          "</center></div><hr><div><center><strong> Magnitude:</strong> " +
           eq_json_data[i].properties.mag +
-          "</center></p>" +
-          "<hr><p><center><strong> EQ Time:</strong> " +
+          "</center></div>" +
+          "<hr><div><center><strong> EQ Time:</strong> " +
           time(eq_json_data[i].properties.time) +
-          "</center></p>"
+          "</center></div>"
       )
       .addTo(eq_map);
   }
